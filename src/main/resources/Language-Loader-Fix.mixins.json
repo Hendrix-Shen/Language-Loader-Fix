@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "top.hendrixshen.LanguageLoaderFix.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinLanguage"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}
