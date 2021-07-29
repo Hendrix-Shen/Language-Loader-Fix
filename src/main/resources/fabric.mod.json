@@ -13,6 +13,14 @@
       }
     }
   ],
+  "contributors": [
+    {
+      "name": "plusls",
+      "contact": {
+        "homepage": "https://github.com/plusls"
+      }
+    }
+  ],
   "contact": {
     "homepage": "https://github.com/Hendrix-Shen",
     "issues": "https://github.com/Hendrix-Shen/Language-Loader-Fix/issues",
