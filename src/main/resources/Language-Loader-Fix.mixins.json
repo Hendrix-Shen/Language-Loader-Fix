@@ -4,7 +4,9 @@
   "package": "top.hendrixshen.LanguageLoaderFix.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "MixinLanguage"
+    "MixinI18n",
+    "MixinLanguage",
+    "MixinTranslatableText"
   ],
   "client": [
   ],

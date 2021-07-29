@@ -31,9 +31,6 @@ public class MixinLanguage {
             )
     )
     private static Matcher onMatcher(Pattern pattern, CharSequence input) {
-        if (input.isEmpty()) {
-            input = "";
-        }
         return FUCK_SYNTAX.matcher(input);
     }
 }
