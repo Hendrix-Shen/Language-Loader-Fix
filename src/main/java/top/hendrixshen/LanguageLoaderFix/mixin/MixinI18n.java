@@ -20,7 +20,7 @@ public class MixinI18n {
         Matcher matcher = TOKEN_PATTERN.matcher(format);
         int matcher_start = 0;
         for (int i = 0; i < args.length && matcher.find(matcher_start); ++i) {
-            String fmt = TOKEN_PATTERN.matcher(format).group();
+            String fmt = matcher.group();
             try {
                 String formatResult = String.format(fmt, args[i]);
                 if (!formatResult.equals(fmt)) {
