@@ -42,7 +42,7 @@ jobs:
       - name: Display commit id
         if: ${{ runner.os == 'Linux' && matrix.java == '16' }}
         run: |
-          echo MiniHUD-Injector commit-${{ steps.getid.outputs.commitID }} \(Public Beta\)
+          echo Language-Loader-Fix commit-${{ steps.getid.outputs.commitID }} \(Public Beta\)
       - name: Set commit id in codes
         if: ${{ runner.os == 'Linux' && matrix.java == '16' }}
         run: |
@@ -57,5 +57,5 @@ jobs:
         if: ${{ runner.os == 'Linux' && matrix.java == '16' }}
         uses: actions/upload-artifact@v2
         with:
-          name: MiniHUD-Injector-mc1.16-${{ steps.getid.outputs.commitID }}(Public Beta)
+          name: Language-Loader-Fix-mc1.16-${{ steps.getid.outputs.commitID }}(Public Beta)
           path: build/libs/
