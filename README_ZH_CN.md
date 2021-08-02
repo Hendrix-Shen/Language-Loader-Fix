@@ -7,15 +7,15 @@
 [![Release](https://img.shields.io/github/v/release/Hendrix-Shen/Language-Loader-Fix?include_prereleases&style=flat-square)](https://github.com/Hendrix-Shen/Language-Loader-Fix/releases)
 [![Github Release Downloads](https://img.shields.io/github/downloads/Hendrix-Shen/Language-Loader-Fix/total?label=Github%20Release%20Downloads&style=flat-square)](https://github.com/Hendrix-Shen/Language-Loader-Fix/releases)
 
-[简体中文](./README_ZH_CN.md)
+[English](./README.md)
 
-Fix **fuck** rules that prevent I18n from using some string formatting expressions!
+修复 I18n 使部分字符串格式化表达式失效的**操蛋**规则!
 
-So,  **fuck**!  **fuck**!  **fuck**!
-## Compiling
-- Clone the repository.
-- Open a command prompt/terminal to the repository directory.
-- Run `gradlew build` to build the mod.
-- The built jar file will be inside `build/libs/`.
-## License
-This project is available under the GPLv3 license. Feel free to learn from it and incorporate it in your own projects.
+所以,  **艹**!  **艹**!  **艹**!
+## 编译
+- 克隆本仓库.
+- 打开命令行并定位到仓库目录.
+- 运行 `gradlew build` 来编译模组.
+- 编译好的模组生成在 `build/libs/`.
+## 许可
+此项目在 **GPLv3许可证** 下可用. 从中学习, 并将其融入到您自己的项目中.
