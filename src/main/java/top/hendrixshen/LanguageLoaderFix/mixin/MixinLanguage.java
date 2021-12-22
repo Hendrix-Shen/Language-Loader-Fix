@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 
 @Mixin(Language.class)
 public class MixinLanguage {
-    private static Pattern FUCK_SYNTAX = Pattern.compile("[^\\W\\w]");
+    private static Pattern FUCK_SYNTAX;
 
     @Inject(
             method = "<clinit>",
