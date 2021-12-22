@@ -22,6 +22,8 @@ import java.util.regex.Pattern;
 public class MixinTranslatableText {
     private final ThreadLocal<List<String>> llf_threadFmtList = ThreadLocal.withInitial(ArrayList::new);
     private static final Pattern LLF_TOKEN_PATTERN = Pattern.compile("%(\\d+\\$)?[\\d.]*[df]");
+    private static final Pattern LLF_ALL_TOKEN_PATTERN = Pattern.compile("%(\\d+\\$)?[\\d.]*[dfs]");
+
     @Final
     @Shadow
     private static StringVisitable NULL_ARGUMENT;
@@ -31,18 +33,17 @@ public class MixinTranslatableText {
     private Object[] args;
 
 
-    @ModifyVariable(method = "setTranslation", at = @At(value = "HEAD"), ordinal = 0)
+    @ModifyVariable(method = "setTranslation", at = @At(value = "HEAD"), ordinal = 0, argsOnly = true)
     private String modifyTranslation(String translation) {
         List<String> fmtList = llf_threadFmtList.get();
         fmtList.clear();
-        String newFormat = LLF_TOKEN_PATTERN.matcher(translation).replaceAll("%$1s");
-        Matcher matcher = LLF_TOKEN_PATTERN.matcher(translation);
+        Matcher matcher = LLF_ALL_TOKEN_PATTERN.matcher(translation);
         int matcher_start = 0;
         while (matcher.find(matcher_start)) {
             fmtList.add(matcher.group());
             matcher_start = matcher.end();
         }
-        return newFormat;
+        return LLF_TOKEN_PATTERN.matcher(translation).replaceAll("%$1s");
     }
 
     @Inject(method = "getArg", at = @At(value = "HEAD"), cancellable = true)
