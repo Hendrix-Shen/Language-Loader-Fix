@@ -1,6 +1,6 @@
 package top.hendrixshen.LanguageLoaderFix.mixin;
 
-import net.minecraft.util.Language;
+import net.minecraft.locale.Language;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -25,7 +25,7 @@ public class MixinLanguage {
     }
 
     @Redirect(
-            method = "load",
+            method = "loadFromJson",
             at = @At(
                     value = "INVOKE",
                     target = "Ljava/util/regex/Pattern;matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;"
