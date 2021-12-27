@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 @Mixin(Language.class)
 public class MixinLanguage {
     private static Pattern FUCK_SYNTAX;
-    @SuppressWarnings("UnresolvedMixinReference")
+
     @Inject(
             method = "<clinit>",
             at = @At(
@@ -23,6 +23,7 @@ public class MixinLanguage {
     private static void onClInit(CallbackInfo ci) {
         FUCK_SYNTAX = Pattern.compile("[^\\W\\w]");
     }
+
     @Redirect(
             method = "load",
             at = @At(
