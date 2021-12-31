@@ -28,15 +28,18 @@ public class MixinTranslatableComponent {
     @Shadow
     private Object[] args;
 
-    @Shadow @Final private static FormattedText TEXT_NULL;
+    @Shadow
+    @Final
+    private static FormattedText TEXT_NULL;
 
     @ModifyVariable(
-            method = "decomposeTemplate",
+            method = "method_11024",
             at = @At(
                     value = "HEAD"
             ),
             ordinal = 0,
-            argsOnly = true
+            argsOnly = true,
+            remap = false
     )
     private String modifyTranslation(String translation) {
         List<String> fmtList = llf_threadFmtList.get();

@@ -6,8 +6,7 @@
   "mixins": [
     "MixinI18n",
     "MixinLanguage",
-    "MixinTranslatableComponent",
-    "MixinTranslatableText"
+    "MixinTranslatableComponent"
   ],
   "client": [
   ],
